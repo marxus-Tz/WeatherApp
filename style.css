@@ -1,0 +1,205 @@
+*{
+   margin: 0;
+   box-sizing: border-box;
+   padding: 0;
+
+}
+
+body{
+    background-color: grey;
+}
+
+
+.navbar{
+display: flex;
+justify-content: center;   
+align-items: center;
+flex-direction: row;
+width: 50%;
+height: 50px;
+margin-left: 20%;
+margin-right: 20%;
+background: linear-gradient(90.93deg, #31C1FE 4.63%, #A537FF 100.84%);
+box-shadow: 10px 12px 30px 10px rgba(0, 0, 0, 0.25);
+border-radius: 52px;
+}
+
+.search{
+    display:block;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    outline: none;
+}
+.search input{
+    width: 100%;
+    height: 20px;
+    color: black;
+    outline: none;
+}
+
+.search-btn{
+    display: flex;
+    width: 5%;
+    height: 20px;
+    margin-left: 12px;
+    justify-content:center;
+    align-items: center;
+    position: relative;
+    color: black;
+    background-color: white;
+  
+}
+
+.search-btn:hover{
+    cursor: pointer;
+}
+
+.search-btn i{
+    font-size: large;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    
+}
+
+/* section styling */
+
+.display{
+display: flex;
+justify-content: center;   
+align-items: center;
+width: 50%;
+height: 500px;
+margin-left: 20%;
+margin-right: 20%;
+margin-top: 20px;
+padding: 40px 20px;
+background: linear-gradient(174.13deg, #2CC7FE -2.48%, #6781FE 42.19%, #A23AFF 98.94%);
+box-shadow: 10px 12px 30px 10px rgba(0, 0, 0, 0.25);
+border-radius: 52px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+  
+}
+.content h1{
+/* Dar es salaam */
+position: absolute;
+width: 584px;
+text-align:middle;
+height: 167px;
+left: 421px;
+top: 20px;
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 167px;
+/* identical to box height */
+color: #FFFFFF;
+}
+
+.content hr{
+position:absolute;
+width: 40%;
+top: 140px;
+margin-left: -0px;
+border: 1px solid #E3EAEA;
+transform: rotate(0.33deg);
+}
+
+.location-date{
+    display: flex;
+    width:50%;
+    flex-direction:column;
+    position: absolute;
+    margin-left: 50px;
+    top:170px;
+
+}
+
+.location-date span{
+color: white;
+font-family: 'DM Sans';
+font-style: normal;
+font-weight: 200;
+font-size: 20px;
+line-height: 10px;
+
+}
+
+.location-date span i{
+    color: white;
+    margin-right: -20px;
+
+}
+
+
+
+
+
+
+
+/* RESPONSIVE MEDIA QUERIES */
+
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: grey;
+    }
+
+.navbar{
+display: flex;
+justify-content: center;   
+align-items: center;
+flex-direction: row;
+width: 100%;
+height: 50px;
+margin-left: -1%;
+margin-right: -10%;
+padding: 10px;
+
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    width: 100%;
+    height: 400px;
+    margin-left: 20%;
+    margin-right: 20%;
+    }
+
+    .content h1{
+        /* Dar es salaam */
+        position:absolute;
+        width: 584px;
+        text-align:middle;
+        height: 167px;
+        left: 221px;
+        top: 20px;
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 167px;
+        /* identical to box height */
+        color: #FFFFFF;
+        }
+        .content hr{
+            width: 80%;
+            margin-left: 0px;
+           
+            }
+        
+  }
+
+  
