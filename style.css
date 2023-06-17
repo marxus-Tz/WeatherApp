@@ -1,205 +1,290 @@
-*{
-   margin: 0;
-   box-sizing: border-box;
-   padding: 0;
 
-}
-
-body{
+html{
     background-color: grey;
 }
 
+h1{
+
+color: white;
+font: poppins;
+text-align: center;
+padding-top: 5px;
+}
+
+/* hr {
+    margin-left: 10px;
+    margin-right: 10px;
+    size: 10px solid red;
+  } */
 
 .navbar{
 display: flex;
 justify-content: center;   
 align-items: center;
-flex-direction: row;
-width: 50%;
-height: 50px;
-margin-left: 20%;
-margin-right: 20%;
+width: 45%;
+height: 70px;
+margin-left: auto;
+margin-right: auto;
 background: linear-gradient(90.93deg, #31C1FE 4.63%, #A537FF 100.84%);
 box-shadow: 10px 12px 30px 10px rgba(0, 0, 0, 0.25);
 border-radius: 52px;
 }
-
-.search{
-    display:block;
-    width: 80%;
+header{
     display: flex;
     justify-content: center;
-    outline: none;
-}
-.search input{
+    align-items: center;
     width: 100%;
+    gap: 5px;
+}
+
+header button{
+    display:block;
+    height: 25px;
+
+}
+
+header button:hover{
+   cursor: pointer;
+}
+
+header input{
+    width: 20rem;
     height: 20px;
     color: black;
+    font-weight: 600;
     outline: none;
 }
 
-.search-btn{
-    display: flex;
-    width: 5%;
-    height: 20px;
-    margin-left: 12px;
-    justify-content:center;
-    align-items: center;
-    position: relative;
-    color: black;
-    background-color: white;
-  
-}
-
-.search-btn:hover{
-    cursor: pointer;
-}
-
-.search-btn i{
-    font-size: large;
-    align-items: center;
-    padding: 10px;
-    margin: 10px;
-    
-}
 
 /* section styling */
 
 .display{
 display: flex;
-justify-content: center;   
+justify-content:flex-start;   
 align-items: center;
+flex-direction: column;
 width: 50%;
-height: 500px;
-margin-left: 20%;
-margin-right: 20%;
-margin-top: 20px;
-padding: 40px 20px;
+height: 30rem;
+margin-left: auto;
+margin-right: auto;
+margin-top: 15px;
 background: linear-gradient(174.13deg, #2CC7FE -2.48%, #6781FE 42.19%, #A23AFF 98.94%);
 box-shadow: 10px 12px 30px 10px rgba(0, 0, 0, 0.25);
 border-radius: 52px;
+position: relative;
 }
 
-.content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+hr{
     width: 80%;
-  
-}
-.content h1{
-/* Dar es salaam */
-position: absolute;
-width: 584px;
-text-align:middle;
-height: 167px;
-left: 421px;
-top: 20px;
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 400;
-font-size: 40px;
-line-height: 167px;
-/* identical to box height */
-color: #FFFFFF;
-}
-
-.content hr{
-position:absolute;
-width: 40%;
-top: 140px;
-margin-left: -0px;
-border: 1px solid #E3EAEA;
-transform: rotate(0.33deg);
-}
-
-.location-date{
-    display: flex;
-    width:50%;
-    flex-direction:column;
+    height: 1px;
+    margin-top: 10px;
     position: absolute;
-    margin-left: 50px;
-    top:170px;
-
+    top: 60px;
 }
 
-.location-date span{
-color: white;
-font-family: 'DM Sans';
-font-style: normal;
-font-weight: 200;
-font-size: 20px;
-line-height: 10px;
-
-}
-
-.location-date span i{
+.display h1{
     color: white;
-    margin-right: -20px;
-
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    font-weight: 400;
+    font-family: poppins, sans-serif;
+   
 }
 
 
+.desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  top: 128px;
+  column-gap: 2px;
+  position: relative;
+}
+
+.desc span {
+  margin-right: 5rem; /* Adjust the desired spacing */
+}
 
 
+ .display .desc{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding-left: 2rem;
+    position: relative;
+    color: white;
+    top: 85px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: poppins, sans-serif;
+} 
+
+
+  .tempinfo{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 2rem;
+    height: 100%;
+    gap: 150px;
+    top: 150px;
+    padding: 20px;
+    background-color: inherit;
+
+  }
+
+  #temperature{
+  color: rgb(246, 243, 243);
+  top: 128px;
+  font-family: poppins, sans-serif;
+  font-size: 1.4rem;
+  padding-left: 2rem;
+  }
+
+  .tempinfo img{
+    width: 150px;
+    height: 150px;
+    top: 128px;
+    padding-top: 3.6rem;
+    background-color: inherit;
+    margin-right: 1.5rem;
+  }
+
+ .Weather-desc{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 2rem;
+    width: 100%;
+    top: 13rem;
+    column-gap: 2px;
+    position: relative;
+  }
+
+.Weather-desc .desc-title{
+  color: rgb(246, 243, 243);
+  top: 128px;
+  font-family: poppins, sans-serif;
+  font-size: 1.5rem;
+}
+
+.Weather-desc .info{
+  color: rgb(246, 243, 243);
+  top: 128px;
+  font-family: poppins, sans-serif;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400px;
+}
 
 
 
 /* RESPONSIVE MEDIA QUERIES */
 
+/* mmobile view */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width:768px){
     body {
       background-color: grey;
     }
 
-.navbar{
-display: flex;
-justify-content: center;   
-align-items: center;
-flex-direction: row;
-width: 100%;
-height: 50px;
-margin-left: -1%;
-margin-right: -10%;
-padding: 10px;
+    h1{
+      color: white;
+      font-family: poppins,sans-serif;
+      text-align: center;
+      padding-top: 5px;
+      font-weight: 600px;
+      }
+
+    .navbar{
+  
+    width: 70%;
+    height: 50px;
+    }
+
+    header{
+      gap: 3.5px;
+  }
+
+  header input{
+    width: 10rem;
+    height: 20px;
+    font-family: poppins, sans-serif;
+    font-weight: 200;
+
+}
+  .display{
+      width: 78%;
+      }
+
+
+  .display h1{
+        font-size: 1.5rem;
+    }
+      
+          
+hr{
+  width: 100%;
+  margin-top: 5px;
 
 }
 
-.display{
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: flex-start;
-    width: 100%;
-    height: 400px;
-    margin-left: 20%;
-    margin-right: 20%;
-    }
 
-    .content h1{
-        /* Dar es salaam */
-        position:absolute;
-        width: 584px;
-        text-align:middle;
-        height: 167px;
-        left: 221px;
-        top: 20px;
-        font-family: 'DM Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 40px;
-        line-height: 167px;
-        /* identical to box height */
-        color: #FFFFFF;
-        }
-        .content hr{
-            width: 80%;
-            margin-left: 0px;
-           
-            }
-        
+.desc{
+  width: 90%;
+  column-gap: 1.5px;
+ 
+}
+
+.display .desc{
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+  gap: 5px;
+  top: 85px;
+} 
+
+.tempinfo{
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
+  height: 90%;
+  gap: 0;
+  top: 170px;
+  padding-left: 0.1rem;
+  background-color: inherit;
+
+}
+
+
+#temperature{
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+  }
+
+  .tempinfo img{
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    padding-top: 3rem;
+    margin-right: -1rem;
+  }
+
+  .Weather-desc{
+    top: 15rem;
+    column-gap: 2px;
+ 
+  }
+
+
   }
 
   

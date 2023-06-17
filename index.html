@@ -6,29 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css" class="rel">
+
 </head>
 <body>
+    <h1>Weather App</h1>
 <div class="navbar">
-    <div class="search"><input type="text" class= "search-input"></div>
-    <div class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></div>
+    <header>
+        <input type="text" class= "search-input" placeholder="Enter your location">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </header>
 </div>
-
 <section class="display">
-    <div class="content">
-        <h1>Dar es salaam</h1> <hr>
+    <h1>Dar es salaam</h1>
+    <hr/> 
+    <div class="desc">
+        <span><i class="fa-solid fa-location-dot"></i>Dar es salaam, Tanzania</span>
+        <span><i class="fa-solid fa-calendar-days"></i>2023-06-14 | Friday</span>
     </div>
-
-
-    <div class="location-date">
-        <span><i class="fa-solid fa-location-dot"></i>    Dar es salaam, Tanzania</span> </br>
-        <span> <i class="fa-solid fa-calendar-days"></i>  2023-06-14 | Friday</span>
-    </div>
-   
     
+    <div class="tempinfo">
+        <p id="temperature"><b>Temperature: 9°C | 48 °F</p></b>
+        <img src="/images/pic1.png" alt="">
+    </div>
+
+    <div class="Weather-desc">
+        <span class="desc-title">  Description</span>
+        <span class="info">Humidity: 60%</span>
+        <span class="info">Preciptation: 4%</span>
+        <span class="info">Wind speed: 6.2KM/h</span>
+    </div>
+
 </section>
-
-
-
 
    <script src="style.js"></script> 
    <script src="https://kit.fontawesome.com/55ef0f7537.js" crossorigin="anonymous"></script>
