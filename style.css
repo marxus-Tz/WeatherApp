@@ -154,7 +154,7 @@ hr{
     top: 128px;
     padding-top: 3.6rem;
     background-color: inherit;
-    margin-right: 1.5rem;
+    margin-right: 1rem;
   }
 
  .Weather-desc{
@@ -176,7 +176,7 @@ hr{
   font-size: 1.5rem;
 }
 
-.Weather-desc .info{
+.Weather-desc .Humidity, .Precipitation, .wind{
   color: rgb(246, 243, 243);
   top: 128px;
   font-family: poppins, sans-serif;
