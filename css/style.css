@@ -53,6 +53,7 @@ header input{
     color: black;
     font-weight: 600;
     outline: none;
+    text-align-last: center;
 }
 
 
@@ -211,10 +212,16 @@ hr{
 
   header input{
     width: 15rem;
-    height: 20px;
+    height: 25px;
     font-family: poppins, sans-serif;
     font-weight: 400;
     outline: none;
+    align-items: center;
+    text-align-last: center;
+}
+header button{
+  height: 30px;
+
 }
   .display{
       width: 105%;
@@ -248,22 +255,22 @@ hr{
   height: 90%;
   gap: 0;
   top: 170px;
-  padding-left: 0.1rem;
+  padding-left: 0.01rem;
   background-color: inherit;
 
 }
 
 
 #temperature{
-  font-size: 1.2rem;
-  padding-left: 0.5rem;
+  font-size: 1.5rem;
+  padding-left: .6rem;
+  padding-top: .3rem;
   }
   .tempinfo img{
     width: 100px;
     height: 100px;
-    top: 70px;
-    padding-top: 3.5rem;
-    margin-left: 4rem;
+    padding-top: 3rem;
+    margin-left: 5.9rem;
   }
   .Weather-desc{
     top: 15rem;

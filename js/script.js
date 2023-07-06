@@ -29,8 +29,8 @@ cityElement.innerText=`${weather.name}`;
 locateElement.innerText=`${weather.name}, ${weather.sys.country}`;
 let now = new Date();
 dateInfoElement.innerHTML= dateBuilder(now);
-wetherImg.style.marginLeft='12rem'
-temperatureElement.innerHTML=`${Math.round(weather.main.temp)+ "°C"}`;
+// wetherImg.style.marginLeft='10rem'
+temperatureElement.innerHTML=`Temperature: ${Math.round(weather.main.temp)+ "°C"}`;
 
 elements[0].innerHTML = `Description:${weather.main}`;
 elements[1].innerHTML = `Humidity:${weather.main.humidity +"%"}`;
