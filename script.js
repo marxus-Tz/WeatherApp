@@ -1,7 +1,7 @@
 let UserInput = document.querySelector('.search-input')
 let button = document.querySelector('.btn');
 var cityElement = document.querySelector('.city');
-var locateElement = document.querySelector('.locate');
+var locateElement = document.getElementById('location');
 var wetherImg=document.querySelector('.weather-image')
 var dateInfoElement = document.querySelector('.dateInfo');
 var temperatureElement = document.querySelector('#temperature');
@@ -10,22 +10,31 @@ var elements = document.querySelectorAll('.Weather-desc span');
 
 
 button.addEventListener('click', function () {
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${UserInput.value}&units=metric&appid=bd6d61156c5295d91d286d9c4fe31a63`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Weather data not found');
+      }
+      return response.json();
+    })
+    .then(displayAPI)
+    .catch(error => {
+      alert("Error: " + error.message);
+    });
+});
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${UserInput.value}&units=metric&appid=bd6d61156c5295d91d286d9c4fe31a63`)
-     .then((response) => response.json())
-     .then(displayAPI)
-     .catch((err)=> alert("Enter correct city name"))
-
-})
 
 const displayAPI=(weather) =>{
 cityElement.innerText=`${weather.name}`;
-locateElement.innerHTML=`${weather.name}, ${weather.sys.country}`;
+locateElement.innerText=`${weather.name}, ${weather.sys.country}`;
 let now = new Date();
 dateInfoElement.innerHTML= dateBuilder(now);
-wetherImg.style.marginLeft='15rem'
-temperatureElement.innerHTML=`${Math.round(weather.main.temp)}`;
-// elements.innerHTML=`${weather.weather[0].description}`;
+wetherImg.style.marginLeft='13rem'
+temperatureElement.innerHTML=`${Math.round(weather.main.temp)+ "°C"}`;
+
+elements[0].innerHTML = `Description:${weather.main}`;
+elements[1].innerHTML = `Humidity:${weather.main.humidity +"%"}`;
+elements[2].innerHTML = `wind speed:${weather.wind.speed +"Km/h"}`;
 
 }
 
@@ -60,23 +69,29 @@ function dateBuilder(d) {
     let date = d.getDate();
     let month = Months[d.getMonth()];
     let year = d.getFullYear();
-    return `${day}, ${date}, ${month}, ${year}`;
-  }
+
+    let hours = d.getHours();
+    let minutes = d.getMinutes();
+    let ampm = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12;
+    hours = hours ? hours : 12; // Handle midnight (0 hours)
   
-
-
-
+    let timezoneOffset = d.getTimezoneOffset() / 60; // Convert minutes to hours 
+    let timezoneHours = Math.abs(Math.floor(timezoneOffset));
+    let timezoneMinutes = Math.abs(timezoneOffset % 1 * 60);
+  
+    let timezone = `${("0" + timezoneHours).slice(-2)}:${("0" + timezoneMinutes).slice(-2)}`;
+  
+    return `${day}, ${date}, ${month}, ${year}, ${hours}:${("0" + minutes).slice(-2)} ${ampm},`;
+    // return `${day}, ${date}, ${month}, ${year}`
+  }
 
 //  I wanted to know if DOM worked fine
 // cityElement.innerHTML="Mwanza";
 // locateElement.innerHTML="Mbeya";
 // dateInfoElement.innerHTML= "to day date";
 // temperatureElement.innerHTML="am javascript temperature";
-// // humidityElements[0].innerHTML='high';
-// // pptElements[0].innerHTML ="low";
-// // windElements[0].innerHTML='strong'
-// elements[0].innerHTML = 'high';
-// elements[1].innerHTML = 'low';
+//
 // elements[2].innerHTML = 'strong';
 // elements[3].innerHTML = 'here we go';
 
