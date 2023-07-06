@@ -152,7 +152,7 @@ hr{
     top: 120px;
     padding-top: 4rem;
     background-color: inherit;
-    margin-left: 7rem;
+    margin-left: 2rem;
   }
 
  .Weather-desc{
@@ -261,9 +261,9 @@ hr{
   .tempinfo img{
     width: 100px;
     height: 100px;
-    top: 130px;
-    padding-top: 4rem;
-    margin-right: -0.5rem;
+    top: 70px;
+    padding-top: 3.5rem;
+    margin-left: 4rem;
   }
   .Weather-desc{
     top: 15rem;
