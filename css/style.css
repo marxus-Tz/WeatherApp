@@ -91,8 +91,6 @@ hr{
     font-family: poppins, sans-serif;
    
 }
-
-
 .desc{
   display: flex;
   flex-direction: column;
@@ -150,11 +148,11 @@ hr{
 
   .tempinfo img{
     width: 150px;
-    height: 150px;
-    top: 128px;
-    padding-top: 3.6rem;
+    height: 140px;
+    top: 120px;
+    padding-top: 4rem;
     background-color: inherit;
-    margin-right: 1rem;
+    margin-left: 7rem;
   }
 
  .Weather-desc{
@@ -185,10 +183,7 @@ hr{
   font-weight: 400px;
 }
 
-
-
 /* RESPONSIVE MEDIA QUERIES */
-
 /* mmobile view */
 
 @media only screen and (max-width:768px){
@@ -226,26 +221,17 @@ hr{
       border-radius: 20px;
 
       }
-
-
   .display h1{
         font-size: 1.5rem;
-    }
-      
-          
+    }     
 hr{
   width: 100%;
   margin-top: 5px;
-
 }
-
-
 .desc{
   width: 100%;
   column-gap: 1.5px;
- 
 }
-
 .display .desc{
   font-size: 1.2rem;
   padding-left: 3rem;
@@ -272,7 +258,6 @@ hr{
   font-size: 1.2rem;
   padding-left: 0.5rem;
   }
-
   .tempinfo img{
     width: 100px;
     height: 100px;
@@ -280,14 +265,11 @@ hr{
     padding-top: 4rem;
     margin-right: -0.5rem;
   }
-
   .Weather-desc{
     top: 15rem;
     column-gap: 2px;
  
   }
-
-
   }
 
   
