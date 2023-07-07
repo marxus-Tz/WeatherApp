@@ -143,17 +143,16 @@ hr{
   color: rgb(246, 243, 243);
   top: 128px;
   font-family: poppins, sans-serif;
-  font-size: 1.4rem;
-  padding-left: 2rem;
+  font-size: 1.3rem;
+  padding-left: 1rem;
   }
 
   .tempinfo img{
-    width: 150px;
+    width: 140px;
     height: 140px;
     top: 120px;
-    padding-top: 4rem;
+    padding-top: 3rem;
     background-color: inherit;
-    margin-left: 2rem;
   }
 
  .Weather-desc{
@@ -267,10 +266,10 @@ hr{
   padding-top: .3rem;
   }
   .tempinfo img{
-    width: 100px;
-    height: 100px;
-    padding-top: 3rem;
-    margin-left: 5.9rem;
+    width: 90px;
+    height: 90px;
+    padding-top: 6rem;
+    margin-left: 3rem;
   }
   .Weather-desc{
     top: 15rem;
